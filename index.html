@@ -1,12 +1,392 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>German Verb Quiz</title>
-  <!-- The rest of the content is included inline from the user canvas -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
 </head>
 <body>
-<!-- Placeholder: actual HTML content should be inserted here from the canvas -->
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;German Verb Quiz&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background: linear-gradient(to right, #fffdf6, #e0f7fa);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color: #222;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin: auto;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>flex-direction: row;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>gap: 2rem;</p>
+<p class="p1">}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sidebar {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 30%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.main {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex: 1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-bottom: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>box-shadow: 0 6px 14px rgba(0,0,0,0.1);</p>
+<p class="p1">}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.collapsible {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background-color: #ff7043;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>outline: none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-bottom: 0.3rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius: 8px;</p>
+<p class="p1">}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.active, .collapsible:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #00796b;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.content {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0 15px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #f1f1f1;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.verb-btn {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background-color: #fff8e1;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border: 1px solid #ffa726;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color: #e65100;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin: 6px 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 18px;</p>
+<p class="p1">}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.verb-btn:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #e0f2f1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tab-btn {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-right: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 0.75rem 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background-color: #43a047;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>cursor: pointer;</p>
+<p class="p1">}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tab-btn:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #00796b;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hidden {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="sidebar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="verb-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h3&gt;📚 Choose a Verb&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="collapsible"&gt;🟢 mit &lt;code&gt;haben&lt;/code&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="content" id="habenVerbs"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="collapsible"&gt;🔵 mit &lt;code&gt;sein&lt;/code&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="content" id="seinVerbs"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="stats-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="collapsible"&gt;📈 Your Progress&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul id="progressList"&gt;&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="main"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;✨ German Verb Learning Game ✨&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="tab-btn" onclick="toggleTab('teach')"&gt;👨‍🏫 Learn&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="tab-btn" onclick="toggleTab('quiz')"&gt;🧠 Quiz&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="teach-section" class="section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p id="teach-content"&gt;Loading...&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="quiz-section" class="section hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="question" id="question"&gt;Loading...&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;input class="answer-input" id="answer" placeholder="Type Partizip II here..." /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;br /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="checkAnswer()"&gt;🎯 Check&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="nextQuestion()"&gt;🔁 Learn Next&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="learnAgain()"&gt;🔄 Learn Again&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="result" id="result"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const verbs = [</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "sein", english: "to be", aux: "sein", partizip: "gewesen", example: "Ich bin gewesen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "haben", english: "to have", aux: "haben", partizip: "gehabt", example: "Ich habe gehabt." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "gehen", english: "to go", aux: "sein", partizip: "gegangen", example: "Ich bin gegangen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "machen", english: "to do/make", aux: "haben", partizip: "gemacht", example: "Ich habe gemacht." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "kommen", english: "to come", aux: "sein", partizip: "gekommen", example: "Ich bin gekommen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "sehen", english: "to see", aux: "haben", partizip: "gesehen", example: "Ich habe gesehen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "geben", english: "to give", aux: "haben", partizip: "gegeben", example: "Ich habe gegeben." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "finden", english: "to find", aux: "haben", partizip: "gefunden", example: "Ich habe gefunden." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "denken", english: "to think", aux: "haben", partizip: "gedacht", example: "Ich habe gedacht." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "nehmen", english: "to take", aux: "haben", partizip: "genommen", example: "Ich habe genommen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "sprechen", english: "to speak", aux: "haben", partizip: "gesprochen", example: "Ich habe gesprochen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "bringen", english: "to bring", aux: "haben", partizip: "gebracht", example: "Ich habe gebracht." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "fahren", english: "to drive/go", aux: "sein", partizip: "gefahren", example: "Ich bin gefahren." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "bleiben", english: "to stay", aux: "sein", partizip: "geblieben", example: "Ich bin geblieben." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "wissen", english: "to know (a fact)", aux: "haben", partizip: "gewusst", example: "Ich habe gewusst." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "arbeiten", english: "to work", aux: "haben", partizip: "gearbeitet", example: "Ich habe gearbeitet." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "lesen", english: "to read", aux: "haben", partizip: "gelesen", example: "Ich habe gelesen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "schreiben", english: "to write", aux: "haben", partizip: "geschrieben", example: "Ich habe geschrieben." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "laufen", english: "to run", aux: "sein", partizip: "gelaufen", example: "Ich bin gelaufen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "tragen", english: "to carry/wear", aux: "haben", partizip: "getragen", example: "Ich habe getragen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "spielen", english: "to play", aux: "haben", partizip: "gespielt", example: "Ich habe gespielt." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "fragen", english: "to ask", aux: "haben", partizip: "gefragt", example: "Ich habe gefragt." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "antworten", english: "to answer", aux: "haben", partizip: "geantwortet", example: "Ich habe geantwortet." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "wohnen", english: "to live/reside", aux: "haben", partizip: "gewohnt", example: "Ich habe gewohnt." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "trinken", english: "to drink", aux: "haben", partizip: "getrunken", example: "Ich habe getrunken." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "essen", english: "to eat", aux: "haben", partizip: "gegessen", example: "Ich habe gegessen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "helfen", english: "to help", aux: "haben", partizip: "geholfen", example: "Ich habe geholfen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "schlafen", english: "to sleep", aux: "haben", partizip: "geschlafen", example: "Ich habe geschlafen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "verkaufen", english: "to sell", aux: "haben", partizip: "verkauft", example: "Ich habe verkauft." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "kaufen", english: "to buy", aux: "haben", partizip: "gekauft", example: "Ich habe gekauft." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "hören", english: "to hear/listen", aux: "haben", partizip: "gehört", example: "Ich habe gehört." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "sehen", english: "to see", aux: "haben", partizip: "gesehen", example: "Ich habe gesehen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "sitzen", english: "to sit", aux: "haben", partizip: "gesessen", example: "Ich habe gesessen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "stehen", english: "to stand", aux: "haben", partizip: "gestanden", example: "Ich habe gestanden." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "liegen", english: "to lie (down)", aux: "haben", partizip: "gelegen", example: "Ich habe gelegen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "lernen", english: "to learn", aux: "haben", partizip: "gelernt", example: "Ich habe gelernt." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "studieren", english: "to study", aux: "haben", partizip: "studiert", example: "Ich habe studiert." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "reisen", english: "to travel", aux: "sein", partizip: "gereist", example: "Ich bin gereist." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "fliegen", english: "to fly", aux: "sein", partizip: "geflogen", example: "Ich bin geflogen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "steigen", english: "to climb", aux: "sein", partizip: "gestiegen", example: "Ich bin gestiegen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "umziehen", english: "to move house", aux: "sein", partizip: "umgezogen", example: "Ich bin umgezogen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "aufstehen", english: "to get up", aux: "sein", partizip: "aufgestanden", example: "Ich bin aufgestanden." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "einsteigen", english: "to get in", aux: "sein", partizip: "eingestiegen", example: "Ich bin eingestiegen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "aussteigen", english: "to get out", aux: "sein", partizip: "ausgestiegen", example: "Ich bin ausgestiegen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "mitkommen", english: "to come along", aux: "sein", partizip: "mitgekommen", example: "Ich bin mitgekommen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "anfangen", english: "to begin/start", aux: "haben", partizip: "angefangen", example: "Ich habe angefangen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "aufhören", english: "to stop", aux: "haben", partizip: "aufgehört", example: "Ich habe aufgehört." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "bezahlen", english: "to pay", aux: "haben", partizip: "bezahlt", example: "Ich habe bezahlt." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "erklären", english: "to explain", aux: "haben", partizip: "erklärt", example: "Ich habe erklärt." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "sagen", english: "to say", aux: "haben", partizip: "gesagt", example: "Ich habe gesagt." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "verlieren", english: "to lose", aux: "haben", partizip: "verloren", example: "Ich habe verloren." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "gewinnen", english: "to win", aux: "haben", partizip: "gewonnen", example: "Ich habe gewonnen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "vergessen", english: "to forget", aux: "haben", partizip: "vergessen", example: "Ich habe vergessen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "suchen", english: "to search", aux: "haben", partizip: "gesucht", example: "Ich habe gesucht." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "finden", english: "to find", aux: "haben", partizip: "gefunden", example: "Ich habe gefunden." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "erzählen", english: "to tell/narrate", aux: "haben", partizip: "erzählt", example: "Ich habe erzählt." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "leben", english: "to live", aux: "haben", partizip: "gelebt", example: "Ich habe gelebt." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "denken", english: "to think", aux: "haben", partizip: "gedacht", example: "Ich habe gedacht." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "ziehen", english: "to pull", aux: "haben", partizip: "gezogen", example: "Ich habe gezogen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "lassen", english: "to let/allow", aux: "haben", partizip: "gelassen", example: "Ich habe gelassen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "vergessen", english: "to forget", aux: "haben", partizip: "vergessen", example: "Ich habe vergessen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "backen", english: "to bake", aux: "haben", partizip: "gebacken", example: "Ich habe gebacken." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "waschen", english: "to wash", aux: "haben", partizip: "gewaschen", example: "Ich habe gewaschen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "kochen", english: "to cook", aux: "haben", partizip: "gekocht", example: "Ich habe gekocht." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "putzen", english: "to clean", aux: "haben", partizip: "geputzt", example: "Ich habe geputzt." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "basteln", english: "to craft", aux: "haben", partizip: "gebastelt", example: "Ich habe gebastelt." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "zeichnen", english: "to draw", aux: "haben", partizip: "gezeichnet", example: "Ich habe gezeichnet." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "malen", english: "to paint", aux: "haben", partizip: "gemalt", example: "Ich habe gemalt." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "reparieren", english: "to repair", aux: "haben", partizip: "repariert", example: "Ich habe repariert." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "öffnen", english: "to open", aux: "haben", partizip: "geöffnet", example: "Ich habe geöffnet." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "schließen", english: "to close", aux: "haben", partizip: "geschlossen", example: "Ich habe geschlossen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "beginnen", english: "to begin", aux: "haben", partizip: "begonnen", example: "Ich habe begonnen." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "ändern", english: "to change", aux: "haben", partizip: "geändert", example: "Ich habe geändert." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "warten", english: "to wait", aux: "haben", partizip: "gewartet", example: "Ich habe gewartet." },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{ verb: "dauern", english: "to last", aux: "haben", partizip: "gedauert", example: "Es hat lange gedauert." }</p>
+<p class="p1">];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let currentIndex = 0;</p>
+<p class="p1">let retryMode = false;</p>
+<p class="p1">let retryList = [];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let verbStats = Array(verbs.length).fill().map(() =&gt; ({ correct: 0, attempts: 0 }));</p>
+<p class="p2"><br></p>
+<p class="p1">function filterProgress(filterType) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const progressList = document.getElementById("progressList");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>progressList.innerHTML = "";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const filtered = verbs.map((v, i) =&gt; ({ index: i, ...v, ...verbStats[i] }))</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.filter(entry =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (filterType === 'all') return true;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (filterType === 'haben') return entry.aux === 'haben';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (filterType === 'sein') return entry.aux === 'sein';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (filterType === 'low') return entry.attempts &gt; 0 &amp;&amp; (entry.correct / entry.attempts) &lt; 0.5;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return true;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>})</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sort((a, b) =&gt; (b.correct / (b.attempts || 1)) - (a.correct / (a.attempts || 1)));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>filtered.forEach(entry =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const accuracy = entry.attempts ? Math.round((entry.correct / entry.attempts) * 100) : 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const li = document.createElement("li");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>li.textContent = `${entry.verb} - ${entry.correct}/${entry.attempts} (${accuracy}%)`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>progressList.appendChild(li);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function generateVerbButtons() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const habenContainer = document.getElementById("habenVerbs");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const seinContainer = document.getElementById("seinVerbs");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>habenContainer.innerHTML = "";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>seinContainer.innerHTML = "";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>verbs.forEach((v, i) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const btn = document.createElement("button");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>btn.textContent = v.verb;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>btn.className = "verb-btn";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>btn.onclick = () =&gt; showTeachContent(i);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (v.aux === "haben") {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>habenContainer.appendChild(btn);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>seinContainer.appendChild(btn);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function showTeachContent(index = 0) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>currentIndex = index;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const v = verbs[index];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const teachText = `Verb: &lt;strong&gt;${v.verb}&lt;/strong&gt;&lt;br&gt;` +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>`Meaning: ${v.english}&lt;br&gt;` +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>`Auxiliary: ${v.aux}&lt;br&gt;` +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>`Partizip II: ${v.partizip}&lt;br&gt;` +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>`Example: ${v.example}`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("teach-content").innerHTML = teachText;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function showQuiz() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const v = verbs[currentIndex];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("question").textContent = `What is the Partizip II of "${v.verb}" (English: ${v.english})?`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("answer").value = "";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("result").textContent = "";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function checkAnswer() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const input = document.getElementById("answer").value.trim().toLowerCase();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const correct = verbs[currentIndex].partizip.toLowerCase();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const example = verbs[currentIndex].example;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const resultDiv = document.getElementById("result");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (input === correct) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>resultDiv.textContent = `✅ Correct! Example: ${example}`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>resultDiv.style.color = "green";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateVerbProgress(currentIndex, true);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>resultDiv.textContent = `❌ Incorrect. The correct answer is '${verbs[currentIndex].partizip}'. Example: ${example}`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>resultDiv.style.color = "crimson";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateVerbProgress(currentIndex, false);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function nextQuestion() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (retryMode &amp;&amp; retryList.length &gt; 0) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>currentIndex = retryList.shift();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>currentIndex = (currentIndex + 1) % verbs.length;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>showTeachContent(currentIndex);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("teach-section").classList.remove("hidden");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("quiz-section").classList.add("hidden");</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function learnAgain() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("teach-section").classList.remove("hidden");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("quiz-section").classList.add("hidden");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function updateProgress() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const progressList = document.getElementById("progressList");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>progressList.innerHTML = "";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>verbs.forEach((v, i) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const { correct, attempts } = verbStats[i];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const accuracy = attempts ? Math.round((correct / attempts) * 100) : 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const li = document.createElement("li");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>li.textContent = `${v.verb} - ${correct}/${attempts} (${accuracy}%)`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>progressList.appendChild(li);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function updateVerbProgress(index, isCorrect) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (isCorrect) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>verbStats[index].correct++;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (!retryList.includes(index)) retryList.push(index);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>verbStats[index].attempts++;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>updateProgress();</p>
+<p class="p2"><br></p>
+<p class="p1">// Filter buttons</p>
+<p class="p1">const filterBar = document.createElement('div');</p>
+<p class="p1">filterBar.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div style="margin: 0.5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick=\"filterProgress('all')\"&gt;All&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick=\"filterProgress('haben')\"&gt;mit haben&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick=\"filterProgress('sein')\"&gt;mit sein&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick=\"filterProgress('low')\"&gt;Low Accuracy&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">`;</p>
+<p class="p1">document.querySelector(".stats-list .content").prepend(filterBar);</p>
+<p class="p1">filterProgress('all');</p>
+<p class="p2"><br></p>
+<p class="p1">// Retry mode toggle</p>
+<p class="p1">const retryButton = document.createElement('button');</p>
+<p class="p1">retryButton.textContent = "🔁 Retry Incorrect Only";</p>
+<p class="p1">retryButton.onclick = () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>retryMode = true;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (retryList.length === 0) alert("No incorrect answers to retry!");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>else toggleTab('quiz');</p>
+<p class="p1">};</p>
+<p class="p1">document.querySelector(".stats-list .content").appendChild(retryButton);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function initializeCollapsibles() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const collapsibles = document.querySelectorAll(".collapsible");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>collapsibles.forEach(button =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>button.addEventListener("click", function () {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>this.classList.toggle("active");</p>
+<p class="p1"><span class="Apple-converted-space">          </span>const content = this.nextElementSibling;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>content.style.display = content.style.display === "block" ? "none" : "block";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function toggleTab(tab) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const teach = document.getElementById("teach-section");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const quiz = document.getElementById("quiz-section");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (tab === "teach") {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>teach.classList.remove("hidden");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>quiz.classList.add("hidden");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>teach.classList.add("hidden");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>quiz.classList.remove("hidden");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>showQuiz();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>initializeCollapsibles();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>generateVerbButtons();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>showTeachContent();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>updateProgress();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
 </body>
 </html>
